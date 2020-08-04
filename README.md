@@ -29,7 +29,7 @@ To begin, take a look at the starting code provided in `src/App.js`:
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import { addItem } from  './actions/items';
+import { addItem } from  './actions/items';  
 
 class App extends Component {
 
@@ -61,7 +61,7 @@ export default connect(mapStateToProps)(App);
 We can see that `mapStateToProps()` is already implemented and is
 making `state.items` available to `App` as `this.props.items`. We
 also see that the button in `render()` calls `handleOnClick()` when
-clicked. The `handleOnClick()` does one thing - it dispatches an action 
+clicked. The `handleOnClick()` does one thing - it dispatches an action
 to the _store_.
 
 In the earlier `mapStateToProps()` Readme, we changed our code such that we no
@@ -165,7 +165,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 Okay, so let's see what adding our `mapDispatchToProps()` function, and passing it
 through as a second argument accomplished. We'll place in another debugger in
 our component, right at the beginning of `render()`, just before the return
-statement. 
+statement.
 
 ```js
 // src/App.js
